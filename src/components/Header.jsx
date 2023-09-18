@@ -6,9 +6,20 @@ export default function Header () {
     return (
         <div>
             <div className="header">
-                <p>Kontakt</p>
-                <h3><Component/></h3>                
-                <p>Rezerwacje</p>
+                <ul>
+                    <li><a>Home</a></li>
+                </ul>
+                <ul>
+                    <Component/>
+                </ul>               
+                <ul>
+                    <li><a>Rezerwacje</a></li>
+                </ul>
+                <div className="hamburger">
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                    <span className="bar"></span>
+                </div>
             </div>
             <div className="main">
                 <div className="content">
@@ -17,8 +28,8 @@ export default function Header () {
                         <p>Wynajmij boisko, sprzęt piłarski , a nawet trening z profesjonalnym trenerem </p>
                     </div>
                     
-                </div>
-                <h3><Reserving/></h3>
+                </div>              
+                <h3 className="reserve-button"><Reserving/></h3>         
             </div>
         </div>
     )

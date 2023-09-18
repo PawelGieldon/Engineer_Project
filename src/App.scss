@@ -1,0 +1,137 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* background-image: url('https://www.insure4sport.co.uk/blog/wp-content/uploads/sites/9/2021/11/football-training-equipment-1-1024x683.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+  
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color:black; 
+}
+
+.header li {
+  margin-right: 3rem;
+  font-size: 1.2rem;
+}
+
+li{
+  list-style: none;
+}
+
+.header li a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
+}
+.main li a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  display: block;
+  width: 90vw;
+  height: 60vh;
+  margin: 0 auto;
+}
+
+.content {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+.content p {
+  font-weight: 700;
+  font-size: large;
+  width: 350px;
+}
+
+.reserve-button li a {
+  padding: 16px 42px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  line-height: 1.25;
+  background: #ff3466;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color .6s ease;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    transform-style: flat;
+    transform: translate3d(-50%,-50%,0);
+    background: rgba(white,.1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease;
+  }
+  &:focus,
+  &:hover {
+      background: darken(#ff3466,7%);
+  }
+  &:active {
+    &:after {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.reserve-button {
+  position: absolute;
+  top: 50%; /* Ustawienie tekstu na środku obrazka w pionie */
+  left: 50%; /* Ustawienie tekstu na środku obrazka w poziomie */
+  transform: translate(-50%, -50%); /* Wycentruj tekst na obrazku */ 
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+
+
+
+@media (max-width: 776px) {
+  .reserve-button li a {
+      padding: 14px 36px;
+      
+  }
+  
+}
