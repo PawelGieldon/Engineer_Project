@@ -1,0 +1,69 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  /* background-image: url('https://www.insure4sport.co.uk/blog/wp-content/uploads/sites/9/2021/11/football-training-equipment-1-1024x683.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+  
+}
+
+.header p, h3 {
+  margin-right: 3rem;
+  font-size: 1.2rem;
+  color: black;
+}
+
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color:#bdcebe;
+  
+}
+li{
+  list-style: none;
+}
+
+.header li a {
+  text-decoration: none;
+  color: black;
+}
+.main li a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  display: block;
+  width: 90vw;
+  height: 60vh;
+  margin: 0 auto;
+}
+
+.content {
+  position: relative;
+}
+
+.text-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.content p {
+  font-weight: 700;
+  font-size: large;
+  width: 350px;
+}
