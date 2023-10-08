@@ -1,8 +1,7 @@
-import './App.scss'
 import { Route, Routes } from 'react-router-dom'
 import Contact from './pages/Contact'
 import List from './pages/List'
-
+import './App.scss'
 
 function App() {
   
