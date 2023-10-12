@@ -1,6 +1,7 @@
 import React from "react";
 import Component from "./Component";
 import Reserving from "./Reserving";
+import { Outlet, Link } from "react-router-dom";
 
 export default function Header() {
   
@@ -29,13 +30,17 @@ export default function Header() {
                   Home
                 </a>
               </li>
-              <Component/>
+              <li><Link to="/List" className="nav-link " aria-current="page">Oferta</Link></li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
                   Pricing
                 </a>
               </li>
-              
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  Kontakt
+                </a>
+              </li>          
             </ul>
           </div>
         </div>

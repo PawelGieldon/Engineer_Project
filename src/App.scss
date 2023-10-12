@@ -2,21 +2,16 @@
   box-sizing: border-box;
 }
 
-
-
 body {
-  width: 100%;
-  height: 100%;
   margin: 0;
-  
-  /* background-image: url('https://www.insure4sport.co.uk/blog/wp-content/uploads/sites/9/2021/11/football-training-equipment-1-1024x683.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center; */
-  
+  overflow-x: hidden;
 }
 .navbar a  {
   color: white;
+}
+
+.navbar-nav {
+  margin-right: 5rem;
 }
 
 .navbar-toggler {
@@ -35,7 +30,7 @@ li{
 
 img {
   display: block;
-  width: 95vw;
+  width: 100vw;
   height: 75vh;
   margin: 0 auto;
 }
@@ -50,6 +45,12 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px 20px;
+  font-family: 'Merriweather', serif;
+
+  li a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 .content-container h4 {
@@ -59,12 +60,43 @@ img {
   transform: translate(-50%, -50%);
   padding: 10px 20px;
   color: white;
+  font-family: 'Merriweather', serif;
+}
+
+.information {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+
+  a{
+    margin-right: 3rem;
+    padding: 40px 30px;   
+    background-image: url('https://media.istockphoto.com/id/453005047/photo/soccer-field.jpg?s=612x612&w=0&k=20&c=uRmO9piBTsE5JEaU_SMMRvUtYYmSuiY-DOmF7eSqCUw=');
+    background-size: cover;
+    font-family: 'Merriweather', serif;
+  }
+  li a{
+    text-decoration: none;
+    color: white;            
+  }
+  
+}
+
+footer {
+  background-color: #333;
+  color: #fff; 
+  text-align: center; 
+  padding: 20px; 
+  margin-top: 5rem;
+
+  a {
+    text-decoration: none; 
+    margin: 0 10px; 
+  }
 }
 
 @media (max-width: 768px) {
-  .reserve-button li a {
-      padding: 14px 36px;     
-  }
+  
   
 }
 
