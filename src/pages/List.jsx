@@ -1,10 +1,11 @@
 import { Outlet, Link } from "react-router-dom";
+import Header from "../components/Header";
+import Information from "../components/Information";
 export default function List() {
-       
-    return (
-        <div>
-            <h1>LISTA</h1>
-            <li><Link to="/"> Powrót</Link> </li>
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <Information/>
+    </div>
+  );
 }

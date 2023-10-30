@@ -3,12 +3,18 @@
 }
 
 body {
-  margin: 0;
   overflow-x: hidden;
+  margin: 0;
 }
-.navbar a  {
-  color: white;
+
+.navbar   {
+  
+  a {
+    color: white;
+  }
 }
+
+
 
 .navbar-nav {
   margin-right: 5rem;
@@ -28,7 +34,7 @@ li{
   color: white;
 }
 
-img {
+.content-container img {
   display: block;
   width: 100vw;
   height: 75vh;
@@ -41,7 +47,7 @@ img {
 
 .overlay-button {
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px 20px;
@@ -68,6 +74,7 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 
   a{
     margin-right: 3rem;
@@ -75,7 +82,6 @@ img {
     background-image: url('https://media.istockphoto.com/id/453005047/photo/soccer-field.jpg?s=612x612&w=0&k=20&c=uRmO9piBTsE5JEaU_SMMRvUtYYmSuiY-DOmF7eSqCUw=');
     background-size: cover;
     font-family: 'Merriweather', serif;
-    
   }
   li a{
     text-decoration: none;
@@ -116,6 +122,21 @@ img {
   }
 }
 
+.offert-information-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10rem;
+    text-align: center;
+    align-items: center;
+
+  p {
+    font-family: 'Merriweather', serif;
+    line-height: 3rem;
+  }
+}
+
 .second-grass {
   margin-top: 5rem;
   
@@ -130,6 +151,26 @@ footer {
     text-decoration: none; 
     margin: 0 10px; 
   }
+}
+
+.information-container footer {
+  margin-top: 3.5rem;
+}
+
+.images-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-image, .right-image {
+  width: 20vw;
+  height: 82.8vh;
+
+}
+
+.mid-image {
+  width: 50vw;
 }
 
 .icon-container {

@@ -7,7 +7,7 @@ export default function Header() {
   
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-dark">
+      <nav className="navbar fixed-top navbar-expand-lg bg-dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Navbar
@@ -26,9 +26,7 @@ export default function Header() {
           <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
-                  Home
-                </a>
+                <Link to="/" className="nav-link " aria-current="page">Home</Link>
               </li>
               <li><Link to="/List" className="nav-link " aria-current="page">Oferta</Link></li>
               <li className="nav-item">
