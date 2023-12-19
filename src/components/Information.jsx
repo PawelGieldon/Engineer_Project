@@ -6,7 +6,7 @@ export default function Information() {
       <div className="images-container">
         <img
           className="left-image"
-          src="https://plantscience.psu.edu/research/centers/ssrc/images/spring.jpg/@@images/f25235e1-5c14-403e-8220-baea45d3e571.jpeg"
+          src="https://lawnuk.com/wp-content/uploads/2014/01/Green%20Grass.jpg"
           alt="murawa"
         />
         <img
@@ -16,7 +16,7 @@ export default function Information() {
         />
         <img
           className="right-image"
-          src="https://plantscience.psu.edu/research/centers/ssrc/images/spring.jpg/@@images/f25235e1-5c14-403e-8220-baea45d3e571.jpeg"
+          src="https://lawnuk.com/wp-content/uploads/2014/01/Green%20Grass.jpg"
           alt=""
         />
       </div>
@@ -26,9 +26,7 @@ export default function Information() {
           porta magna. Mauris ut justo egestas, pharetra est ut, blandit ante.
           Donec auctor ipsum lacus, quis commodo ex volutpat fringilla. Donec
           non augue metus. Nulla aliquet leo porta nulla sollicitudin, et
-          elementum nibh porttitor. Morbi rhoncus malesuada magna id posuere. Ut
-          mattis elementum quam, vitae commodo neque lacinia eu. Ut pharetra
-          euismod urna. Morbi imperdiet sit amet lectus vitae ornare. Mauris
+          
            
         </p>
       </div>

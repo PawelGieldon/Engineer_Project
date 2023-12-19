@@ -5,6 +5,7 @@
 body {
   overflow-x: hidden;
   margin: 0;
+  background: linear-gradient(to right, #ffffff, #f0f0f0);
 }
 
 .navbar   {
@@ -189,10 +190,101 @@ footer {
   }
 }
 
+.reservation-images-container{
+  margin-left: 7rem;
+  .left-image{
+    position: absolute;
+    right: 6%;
+  }
+  
+}
 
-@media (max-width: 768px) {
+.services-container {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid #3498db;
+  border-radius: 10px; 
+  width: 42%;
+  height: 730px;
+  box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
+
+  .pitch-image-container{
+    position: relative;  
+    width: 45%;
+    
+    .pitch-image{
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    }
+    .plus-icon {
+      position: absolute;
+      top: 65%; /* Dostosuj położenie w pionie */
+      left: 88%; /* Dostosuj położenie w poziomie */
+      font-size: 3rem;
+      cursor: pointer;
+    }
+    .minus-icon {
+      position: absolute;
+      top: 65%; /* Dostosuj położenie w pionie */
+      left: 10%; /* Dostosuj położenie w poziomie */
+      font-size: 3rem;
+      cursor: pointer;
+    }
+  }
   
+}
+@media (max-width: 1000px) {
+  .information {
+    flex-direction: column;
+    margin-top: 3px;
+    align-items: center;
+    li  {
+      margin-top: 8rem;
+    }
+  }
+
+  .advantage {
+    bottom: 70%;
+  }
+  .paragraphs-container {
+    flex-direction: column;
+    margin-top: 4rem;
+    p {
+      margin-top: 2rem;
+      
+    }
+    p:nth-child(4) {
+      margin-top: 5rem;
+    }
+  }
+  .icon-container {
+    flex-direction: column;
+    margin-top: 14.5rem;
+    margin-left: 12rem;
+    svg:nth-child(-n+3) {
+      margin-top: 2rem;
+    }
+    svg:nth-child(4) {
+      margin-top: 1rem;
+    }
+  }
+  .offert-information-container {
+    p {
+      width: 200px;
+    }
+  }
   
+  .reservation-images-container {
+    margin-left: 1rem;
+    
+  } 
+  
+  .pitch-image {
+    width: 50%;
+  }
 }
 
 @media (min-width: 1268px) {

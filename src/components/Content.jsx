@@ -95,7 +95,7 @@ export default function Component() {
       </div>
       <button type="button" className="btn btn-success overlay-button">
         <li>
-          <Link to="/List">Rezerwuj</Link>
+          <Link to="/Reservation">Rezerwuj</Link>
         </li>
       </button>
       <h4 className="description">
