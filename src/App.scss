@@ -191,12 +191,12 @@ footer {
 }
 
 .reservation-images-container{
-  margin-left: 7rem;
+  margin-left: 6rem;
+  margin-top: 3.5rem;
+  margin-bottom: 23.5rem;
   .left-image{
-    position: absolute;
-    right: 6%;
+    margin-right: 52%;
   }
-  
 }
 
 .services-container {
@@ -204,39 +204,59 @@ footer {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 3px solid #3498db;
   border-radius: 10px; 
   width: 42%;
-  height: 730px;
+  height: 1100px;
   box-shadow: 0 0 90px rgba(0, 0, 0, 0.1);
+  margin-top: 11rem;
 
   .pitch-image-container{
     position: relative;  
     width: 45%;
-    
+  
     .pitch-image{
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+      display: block;
+      width: 100%;
+      height: 30%;
+      margin-top: 1.5rem;
+      margin-left: 1rem;
     }
     .plus-icon {
       position: absolute;
-      top: 65%; /* Dostosuj położenie w pionie */
-      left: 88%; /* Dostosuj położenie w poziomie */
+      top: 65%; 
+      left: 88%; 
       font-size: 3rem;
       cursor: pointer;
     }
     .minus-icon {
       position: absolute;
-      top: 65%; /* Dostosuj położenie w pionie */
-      left: 10%; /* Dostosuj położenie w poziomie */
+      top: 65%; 
+      left: 10%; 
       font-size: 3rem;
       cursor: pointer;
+    }   
+    .badge {
+      position: absolute;
+      top: 70%; 
+      left: 46%; 
+      font-size: 1rem;
+      
     }
   }
+  .my-button {
+    width: 30%;
+    margin-left: 9%;
+    margin-top: 2rem;
+  }
   
+  .reservation-container {
+    footer {
+      padding: 30rem;
+    }
+  }
+
 }
-@media (max-width: 1000px) {
+@media screen and (max-width: 1150px) {
   .information {
     flex-direction: column;
     margin-top: 3px;
@@ -278,17 +298,22 @@ footer {
   }
   
   .reservation-images-container {
-    margin-left: 1rem;
-    
+    margin-left: 1rem;   
   } 
   
-  .pitch-image {
-    width: 50%;
+  .pitch-image-container {
+    width: 90% !important;
+  }
+
+  .my-button {
+    width: 80% !important;
   }
 }
 
-@media (min-width: 1268px) {
+
+@media screen and (min-width: 1268px) {
   .content-container h4{
     width: 500px;
   }
 }
+
