@@ -1,0 +1,7 @@
+{
+    "cities" : ["Gdańsk", "Gdynia", "Sopot" ],
+    "district-Gdansk" : ["Orunia Górna", "Morena", "Wrzeszcz", "Chełm", "Zaspa"],
+    "district-Sopot" : ["Sopot-Kamienny-Potok", "Brodwino", "Przylesie" , "Karlikowo" , "Świemirowo"],
+    "district-Gdynia" : ["Leszczynki" , "Meksyk", "Obłuże" , "Chylonia", "Cisowa"],
+    "hours" : ["8-10", "10-12", "12-14", "14-16", "16-18", "18-20", "20-22"]
+}

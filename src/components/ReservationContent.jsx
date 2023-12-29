@@ -117,9 +117,9 @@ export default function ReservationContent() {
         data-bs-target="#staticBackdrop"
       >
         Zarezerwuj
-      </button>
+        </button>
       </div>
-      <WindowPop/>
+      {count > 0 ? <WindowPop/> : ''}
       <footer>
         <p>&copy; TWOJA FIRMA</p>
         <a href="https://www.facebook.com">Facebook</a>
