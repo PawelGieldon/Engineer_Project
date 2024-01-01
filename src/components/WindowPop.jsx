@@ -1,18 +1,46 @@
 import React, { useState } from "react";
-import Values from "../Values.json"
-import Dates from "./Dates"
+import Values from "../Values.json";
+import Dates from "./Dates";
 
 export default function WindowPop() {
-  
   const triCity = {
-    cities : [Values.cities[0], Values.cities[1], Values.cities[2]]
-  }
+    cities: [Values.cities[0], Values.cities[1], Values.cities[2]],
+  };
 
-  const [selectedCity, setSelectedCity] = useState(null)
+  const [selectedCity, setSelectedCity] = useState(0);
+  const [selectedDistrict, setSelectedDistrict] = useState(0);
+  const [selectedHour, setSelectedHour] = useState(0);
+  const [selectedTrainer, setSelectedTrainer] = useState(null);
+  const [error, setError] = useState(null)
 
   const handleCityChange = (event) => {
-    setSelectedCity(event.target.value)
-  }
+    setSelectedCity(Number(event.target.value));
+  };
+
+  const handleDistrictChange = (event) => {
+    setSelectedDistrict(Number(event.target.value));
+  };
+
+  const handleHourChange = (event) => {
+    setSelectedHour(Number(event.target.value));
+  };
+
+  const handleTrainerChange = (event) => {
+    setSelectedTrainer(Number(event.target.value));
+  };
+
+  const handleSubmit = () => {
+    if (selectedCity === 0 || selectedDistrict === 0 || selectedHour === 0 || selectedTrainer === null) {
+      setError(
+        <div className="alert alert-danger w-100" role="alert">
+          Proszę o zaznaczenie wszystkich opcji
+        </div>
+      );
+    } else {
+      setError(null);
+      console.log("Jest okej");
+    }
+  };
 
   return (
     <div
@@ -38,22 +66,52 @@ export default function WindowPop() {
             ></button>
           </div>
           <div className="modal-body">
-            <select className="form-select" aria-label="Default select example" onChange={handleCityChange}>
+            <select
+              className="form-select"
+              aria-label="Default select example"
+              onChange={handleCityChange}
+            >
               <option selected>Wybierz miasto</option>
-              {triCity.cities.map((city, index) =>(
+              {triCity.cities.map((city, index) => (
                 <option key={index} value={index + 1}>
                   {city}
                 </option>
               ))}
-            </select> <br></br>
-            <select className="form-select" aria-label="Default select example" onChange={handleCityChange}>
-              <option selected>Wybierz dzielnicę</option>              
-              {selectedCity === 1 ? <option value="1">One</option> : ''}
-              {selectedCity === 2 ? <option value="1">Two</option> : ''}
-              {selectedCity === 3 ? <option value="1">Three</option> : ''}
-            </select> <br></br>
-            <Dates/> <br></br>
-            <select className="form-select" aria-label="Default select example">
+            </select>{" "}
+            <br></br>
+            <select
+              className="form-select"
+              aria-label="Default select example"
+              onChange={handleDistrictChange}
+            >
+              <option selected>Wybierz dzielnice</option>
+              {selectedCity === 1
+                ? Values.districtGdansk.map((district, index) => (
+                    <option key={index} value={index + 1}>
+                      {district}
+                    </option>
+                  ))
+                : selectedCity === 3
+                ? Values.districtSopot.map((district, index) => (
+                    <option key={index} value={index + 1}>
+                      {district}
+                    </option>
+                  ))
+                : selectedCity === 2
+                ? Values.districtGdynia.map((district, index) => (
+                    <option key={index} value={index + 1}>
+                      {district}
+                    </option>
+                  ))
+                : null}
+            </select>
+            <br></br>
+            <Dates /> <br></br>
+            <select
+              className="form-select"
+              aria-label="Default select example"
+              onChange={handleHourChange}
+            >
               <option selected>Wybierz godzinę</option>
               <option value="1">{Values.hours[0]}</option>
               <option value="2">{Values.hours[1]}</option>
@@ -62,7 +120,8 @@ export default function WindowPop() {
               <option value="3">{Values.hours[4]}</option>
               <option value="3">{Values.hours[5]}</option>
               <option value="3">{Values.hours[6]}</option>
-            </select> <br></br>
+            </select>{" "}
+            <br></br>
             <p>Czy chcesz wynająć trenera?</p>
             <div class="form-check form-check-inline">
               <input
@@ -71,8 +130,9 @@ export default function WindowPop() {
                 name="inlineRadioOptions"
                 id="inlineRadio1"
                 value="option1"
+                onChange={handleTrainerChange}
               />
-              <label class="form-check-label" for="inlineRadio1">
+              <label class="form-check-label" htmlfor="inlineRadio1">
                 Tak
               </label>
             </div>
@@ -83,8 +143,9 @@ export default function WindowPop() {
                 name="inlineRadioOptions"
                 id="inlineRadio2"
                 value="option2"
+                onChange={handleTrainerChange}
               />
-              <label class="form-check-label" for="inlineRadio2">
+              <label class="form-check-label" htmlfor="inlineRadio2">
                 Nie
               </label>
             </div>
@@ -97,9 +158,15 @@ export default function WindowPop() {
             >
               Close
             </button>
-            <button type="button" className="btn btn-primary">
+
+            <button
+              type="button"
+              className="btn btn-primary"
+              onClick={handleSubmit}
+            >
               Understood
             </button>
+            {error}
           </div>
         </div>
       </div>
