@@ -28,17 +28,8 @@ export default function Header() {
               <li className="nav-item">
                 <Link to="/" className="nav-link " aria-current="page">Home</Link>
               </li>
-              <li><Link to="/List" className="nav-link " aria-current="page">Oferta</Link></li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Kontakt
-                </a>
-              </li>          
+              <li><Link to="/List" className="nav-link " aria-current="page">Oferta</Link></li>           
+              <li><Link to="/DataSave" className="nav-link " aria-current="page">Twoje Rezerwacje</Link></li>         
             </ul>
           </div>
         </div>

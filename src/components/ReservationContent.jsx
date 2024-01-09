@@ -8,6 +8,7 @@ export default function ReservationContent() {
     const [countForBalls, setCountForBalls] = useState(0)
     const [countForGloves, setCountForGloves] = useState(0)
     const [countForVests, setCountForVests] = useState(0)
+    
 
     const incrementForBalls = () => {
       setCountForBalls(countForBalls + 1)
@@ -44,16 +45,6 @@ export default function ReservationContent() {
         setCountForVests(countForVests - 1);
       }
     }
-
-    const [openedModal, setOpenedModal] = useState(false);
-
-    const openModal = () => {
-        setOpenedModal(true)
-      };
-
-      const closeModal = () => {
-        setOpenedModal(false)
-      }
 
   return (
     <div className="reservation-container">
@@ -125,8 +116,7 @@ export default function ReservationContent() {
         <a href="https://www.facebook.com">Facebook</a>
         <a href="https://twitter.com">Twitter</a>
         <a href="mailto:kontakt@twojafirma.com">kontakt@twojafirma.com</a>
-      </footer>
-      
+      </footer>    
     </div>
   );
 }
