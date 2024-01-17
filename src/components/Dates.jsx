@@ -5,8 +5,10 @@ import "react-calendar/dist/Calendar.css";
 export default function Dates() {
   const [date, setDate] = useState(new Date());
 
+  
   const handleDateChange = (date) => {
     setDate(date);
+    
   };
 
   return (
