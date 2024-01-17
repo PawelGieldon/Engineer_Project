@@ -110,7 +110,7 @@ export default function ReservationContent() {
         Zarezerwuj
         </button>
       </div>
-      {count > 0 ? <WindowPop/> : ''}
+      {count > 0 ? <WindowPop countForBalls={countForBalls} countForGloves={countForGloves} countForVests={countForVests}/> : ''}
       <footer>
         <p>&copy; TWOJA FIRMA</p>
         <a href="https://www.facebook.com">Facebook</a>

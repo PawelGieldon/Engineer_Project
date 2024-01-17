@@ -2,14 +2,15 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
 
-export default function Dates() {
-  const [date, setDate] = useState(new Date());
+export default function Dates(props) {
 
   
+
   const handleDateChange = (date) => {
-    setDate(date);
-    
+    props.setDate(date);
   };
+
+  const formattedDate = props.date instanceof Date ? props.date.toLocaleDateString() : '';
 
   return (
     <div>
@@ -17,9 +18,9 @@ export default function Dates() {
         <header>
           <p>Wybierz dzień</p>
         </header>
-        <Calendar onChange={handleDateChange} value={date} />
+        <Calendar onChange={handleDateChange} value={props.date} />
         <footer>
-          <p>Wybrana data: {date.toLocaleDateString()}</p>
+        <p>Wybrana data: {formattedDate}</p>
         </footer>
       </div>
     </div>

@@ -1,10 +1,10 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation} from "react-router-dom";
 
 export default function DataSave() {
   const location = useLocation();
 
-  const { selectedCity, selectedDistrict, selectedHour, selectedTrainer} =
+  const { selectedCity, selectedDistrict, selectedHour, selectedTrainer, countForBalls, countForGloves, countForVests, date} =
     location.state || {};
 
   return (
@@ -26,7 +26,11 @@ export default function DataSave() {
         {selectedCity && <p>Miasto: {selectedCity}</p>}
         {selectedDistrict && <p>Dzielnica: {selectedDistrict}</p>}
         {selectedHour && <p>Godzina: {selectedHour}</p>}
+        {date && <p>Data: {date instanceof Date ? date.toLocaleDateString() : ''}</p>}
         {selectedTrainer && <p>Trener: {selectedTrainer}</p>}
+        {countForBalls && <p>Piłki: {countForBalls}</p>}
+        {countForGloves && <p>Rękawice: {countForGloves}</p>}
+        {countForVests && <p>Kamizelki treningowe: {countForVests}</p>}
         
       </div>
       <footer>

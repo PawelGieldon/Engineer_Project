@@ -271,11 +271,16 @@ footer {
   background-color: #f0f0f0; /* Kolor tła */
   background-image: linear-gradient(to right, #4e4e4e, #353535); /* Gradient kolorów (możesz dostosować kolory) */
   color: #ffffff; /* Kolor tekstu na tle */
+  border-radius: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Lekki cień */
   position: absolute;
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  h2, p {
+    margin: 1rem;
+  }
 }
 
 @media screen and (max-width: 1150px) {

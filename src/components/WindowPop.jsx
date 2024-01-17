@@ -3,7 +3,7 @@ import Values from "../Values.json";
 import Dates from "./Dates";
 import { useNavigate } from "react-router-dom";
 
-export default function WindowPop() {
+export default function WindowPop(props) {
   const triCity = {
     cities: [Values.cities[0], Values.cities[1], Values.cities[2]],
   };
@@ -14,10 +14,10 @@ export default function WindowPop() {
   const [selectedTrainer, setSelectedTrainer] = useState(null);
   const [error, setError] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [date, setDate] = useState(new Date());
+ 
 
   const navigate = useNavigate();
-
-  
 
   const handleCityChange = (event) => {
     setSelectedCity(Number(event.target.value));
@@ -36,9 +36,7 @@ export default function WindowPop() {
     option2: "Nie",
   };
 
-  
-
-  const handleTrainerChange = (event) => {  
+  const handleTrainerChange = (event) => {
     setSelectedTrainer(trainerOptions[event.target.value]);
     console.log(event.target.value);
   };
@@ -68,8 +66,11 @@ export default function WindowPop() {
             ? Values.districtGdynia
             : [])[selectedDistrict - 1],
           selectedHour: Values.hours[selectedHour - 1],
-          selectedTrainer: selectedTrainer,    
-          
+          selectedTrainer: selectedTrainer,   
+          countForBalls: props.countForBalls,
+          countForGloves: props.countForGloves,
+          countForVests: props.countForVests,
+          date : date
         },
       });
     }
@@ -154,7 +155,7 @@ export default function WindowPop() {
                 : null}
             </select>
             <br></br>
-            <Dates/> <br></br>
+            <Dates date={date} setDate={setDate}/> <br></br>          
             <select
               className="form-select"
               aria-label="Default select example"
@@ -214,7 +215,7 @@ export default function WindowPop() {
               data-bs-dismiss={showModal && "modal"}
             >
               Rezerwuj
-            </button>
+            </button>         
             {error}
           </div>
         </div>
