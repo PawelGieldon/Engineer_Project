@@ -14,7 +14,7 @@ SCSS,
 React,
 Bootstrap
 
-##Screenshots
+## Screenshots
 ![first_image](https://github.com/PawelGieldon/Engineer_Project/assets/93713186/929ec9ba-fccc-484c-96fc-2a4e9d5bbc18)
 ![second_image](https://github.com/PawelGieldon/Engineer_Project/assets/93713186/a1e369c7-f93b-4cb0-a2a5-61d6efc11547)
 ![third_image](https://github.com/PawelGieldon/Engineer_Project/assets/93713186/7978eae3-fb5f-4b6a-9936-050f0c36e63b)
