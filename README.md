@@ -5,13 +5,13 @@
 This is an reservation app where u can book football field, balls, gloves and training vests
 
 ## Technologies
-Visual Studio Code
-Node.js
-Vite
-JavaScript
-HTML
-SCSS
-React
+Visual Studio Code,
+Node.js,
+Vite,
+JavaScript,
+HTML,
+SCSS,
+React,
 Bootstrap
 
 ##Screenshots
